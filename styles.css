@@ -1,0 +1,424 @@
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVi2ZhZI2eCN5jzbjEETS9weq8-32meGCQYb9lecyU.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/lora/v15/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqt8ndeYxZ0.woff) format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+body {
+    background-color: rgba(238, 238, 238, 0.856);;
+    color: #333;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  color: black;
+}
+
+.main {
+    padding-top: 20px;
+    background-color: #fff;
+}
+
+.page-section {
+    background-color: white;
+}
+
+
+/* global */
+
+.wrapper {
+    max-width: 1310px;
+    margin: 0 auto;
+}
+
+.a-section {
+    margin-bottom: 10px;
+}
+
+.top-articles, .mid-articles, .lower-articles {
+    margin-bottom: 20px;
+}
+
+/*  header / nav */
+
+.page-head {
+    padding: 20px 10px 15px;
+        
+    font-family: 'Roboto Condensed';
+
+    color: #fff;
+
+    background-color: rgb(255, 24, 24);
+}
+
+.nw-logo {
+    width: 132px;
+    height: 20px;
+
+    fill: #fff;
+}
+
+.nw-logo svg {
+    display: block;
+}
+
+#nav-location {
+    display: none;
+}
+
+.top-links {
+    text-transform: uppercase;
+}
+
+.top-links span {
+    padding: 5px 6px;
+}
+
+#tl-subscribe {
+    background-color: #fff;
+    color: rgb(255, 24, 24); 
+}
+
+.header-bottom {
+    display: none;
+    padding: 15px 160px 15px 0px;
+
+    font-family: 'Roboto Condensed';
+    font-size: 19px;
+    line-height: 24px;
+
+    background-color: #fff;
+}
+
+.header-bottom span {
+    flex-grow: 1;
+    border-right: 0.1px solid #d9d9d9;
+    text-align: center;
+}
+
+.header-bottom span:last-child {
+    border: none;
+}
+
+@media screen and (max-width: 480px) {
+    .page-head {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .page-head {
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .nw-logo {
+        width: 396px;
+        height: 60px; 
+        margin: 0 auto;
+    }
+
+    #nav-location {
+        display: inline-block;
+    }
+
+    .header-bottom {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+
+
+/* section heading */
+
+.section-heading {
+    margin: 0px;
+
+    font: bold 16px/16px "Roboto Condensed",sans-serif;
+    color: rgba(3,3,3,.4);
+    text-transform: uppercase;
+    padding-bottom: 11px;
+}
+
+/* article images  */
+
+.article-cover-img {
+    position: relative;
+    margin-bottom: .5rem;
+}
+
+.img-tag {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.featured-tag {
+    display: block;
+    font: bold 17px/16px "Roboto Condensed",sans-serif;
+    color: #f72210;
+    text-transform: uppercase;
+    padding: 8px 15px 9px;
+    background-color: rgba(255,255,255,.9);
+}
+
+.culture-tag {
+    display: inline-block;
+    font: 300 13px/20px "Helvetica Neue","Helvetica",Arial,sans-serif;
+    color: #272727;
+    background-color: #c2d4d7;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+/* top / featured stories  */
+
+
+.featured-text h1 {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 767px) {
+    .top-story-culture {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .top-story-sm {
+        display: none;
+    }
+}
+
+/* heroes of the pandemic / culture travel */
+
+.culture-text h1 {
+    font: 20px/22px "Lora",serif;
+    color: #272727;
+    margin-bottom: 10px;
+}
+
+.culture-text p {
+    font: 15px/20px "Helvetica Neue", sans-serif;
+    color: rgba(39,39,39,.5);
+    margin-bottom: 10px;
+}
+
+
+@media screen and (min-width: 576px) {
+    .heroes-pandemic article, .culture-travel article {
+        flex: 1;
+    }
+
+    .culture-item-mid {
+        margin: 0px 20px
+    }
+
+    .culture-text h1 {
+        font-size: 17px;
+    }
+}
+
+/* small articles */
+
+.article-small {
+    display: flex; 
+    flex-direction: row;
+}
+
+.article-small img {
+    margin-right: 15px;
+}
+
+/* more stories  */
+
+.more-stories article {
+    padding: 14px 0; 
+    border-top: 1px solid #ddd;
+}
+
+.featured-text h4 {
+    font-size: 17px;
+    line-height: 20px;
+}
+
+
+/* opinion  */
+
+.opinion article {
+    padding: 10px 0; 
+}
+
+/* the debate */
+
+.debate-vs {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    color: #d6d6d6;
+    border-radius: 50%;
+    font: bold 14px/40px "Roboto Condensed",sans-serif;
+    text-align: center;
+    margin: 14px auto 18px;
+}
+
+.debate-border {
+    border-top: 4px solid
+}
+
+.db-red {
+    border-color: #f92859;;  
+}
+
+.db-blue {
+    border-color: #1c87fb;
+}
+
+
+/* latest news  */
+
+.latest-news article {
+    padding: 10px 0;
+}
+
+/* mid section  */
+
+.mid-section-heading {
+    text-align: center;
+    font-size: 19px;
+    color: rgb(51, 51, 51);
+
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 12px;
+    text-transform: uppercase; 
+}
+
+/* in the magazine / editors picks */
+
+.in-mag-item {
+    padding: 0px 15px;
+}
+
+.in-mag-item h4 {
+    font-size: 20px;
+}
+
+.in-mag-cat {
+    font: bold 16px/26px "Roboto Condensed",sans-serif;
+    color: #f72210;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.in-mag-cat-l {
+    padding: 0 7px;
+    background-color: #f72210;
+    color: white;
+    margin-right: 7px;
+}
+
+.editors-pick-item {
+    padding: 0px 15px 20px;
+}
+
+
+@media screen and (min-width: 576px) { 
+    .in-magazine article {
+        flex-basis: 25%;
+    }
+
+    .editors-pick article {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .in-magazine article, .editors-pick article {
+        flex-basis: 25%;
+    }
+}
+
+/* lower section  */
+
+/* lower articles  */
+
+.in-magazine {
+    margin-bottom: 20px;
+}
+
+.la-section-heading {
+    border-top: 1px solid #d9d9d9;
+    color: #f72210;
+    padding-top: 25px;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: none;
+}
+
+.la-large-item h4 {
+    font-size: 22px;
+    line-height: 22px;
+    margin: 10px 0 25px 0px;
+}
+
+.la-small-item {
+    display: flex;
+    flex-grow: 1;
+}
+
+.la-s-mid {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.la-small-item h4 {
+    font-size: 17px;
+}
+
+.la-small-item img {
+    margin-right: 15px;
+}
+
+
+/* footer  */
+
+.footer-container { 
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 50px;
+}
+.footer-logo {
+    display: block;
+    width: 236px;
+    height: 36px;
+    margin-right: 15px;
+    margin-bottom: 12px;
+    fill: #f72210;
+}
+
+
+
+
+
+
